@@ -1,0 +1,33 @@
+(section
+  (ref "cgbc_bounded_hashed_maps_delete")
+  (title "CGBC.Bounded_Hashed_Maps.Delete")
+  (para procedure_desc "Delete key/value pair from map.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"procedure Delete
+  (Container : in out Map;
+   Key       : in     Key_Type;
+   Deleted   :    out Boolean);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Delete") " procedure deletes
+      the key specified by " (item parameter "Key")
+      " and the value associated with it from the map specified by "
+      (item parameter "Container") ", and sets " (item parameter "Deleted")
+      " to " (item constant "True") ".")
+    (para
+      "If " (item parameter "Key") " does not exist in "
+      (item parameter "Container") ", " (item parameter "Deleted")
+      " is set to " (item constant "False") "."))
+  (subsection
+    (title "Performance/Complexity")
+    (para
+      "The " (item ada_function "Delete") " function
+       executes in " (item constant "O(1)") " time at zero load,
+       increasing towards " (item constant "O(N)") " as the
+       load factor increases. This is due to the use of simple linear
+       probing for hash collision resolution. Performance is dependent
+       on table size and hash function quality.")))

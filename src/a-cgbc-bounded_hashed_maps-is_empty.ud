@@ -1,0 +1,20 @@
+(section
+  (ref "cgbc_bounded_hashed_maps_is_empty")
+  (title "CGBC.Bounded_Hashed_Maps.Is_Empty")
+  (para function_desc "Map is empty?")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"function Is_Empty (Container : in Map) return Boolean;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Is_Empty") " function
+      is equivalent to:")
+    (para-verbatim variable "(Length (Container) = 0)"))
+  (subsection
+    (title "Performance/Complexity")
+    (para
+      "The " (item ada_function "Is_Empty") " function executes
+       in " (item constant "O(1)") " time.")))

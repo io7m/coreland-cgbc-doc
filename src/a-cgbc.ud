@@ -19,4 +19,5 @@
         range of the result of a hash function.")))
 
   (include "a-cgbc-bounded_stacks.ud")
+  (include "a-cgbc-bounded_hashed_maps.ud")
 )

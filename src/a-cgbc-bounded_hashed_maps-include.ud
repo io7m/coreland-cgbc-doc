@@ -1,0 +1,33 @@
+(section
+  (ref "cgbc_bounded_hashed_maps_include")
+  (title "CGBC.Bounded_Hashed_Maps.Include")
+  (para procedure_desc "Include key/value pair into map.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"procedure Include
+  (Container : in out Map;
+   Key       : in     Key_Type;
+   Element   : in     Element_Type;
+   Included  :    out Boolean);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Include") " procedure is equivalent
+      to:")
+    (para-verbatim example
+"if Contains (Container, Key) then
+  Replace_Element (Container, Key, Element, Included);
+else
+  Insert (Container, Key, Element, Included);
+end if;"))
+  (subsection
+    (title "Performance/Complexity")
+    (para
+      "The " (item ada_function "Include") " function
+       executes in " (item constant "O(1)") " time at zero load,
+       increasing towards " (item constant "O(N)") " as the
+       load factor increases. This is due to the use of simple linear
+       probing for hash collision resolution. Performance is dependent
+       on table size and hash function quality.")))

@@ -1,0 +1,35 @@
+(section
+  (ref "cgbc_bounded_hashed_maps_insert")
+  (title "CGBC.Bounded_Hashed_Maps.Insert")
+  (para procedure_desc "Insert key/value pair into map.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"procedure Insert
+  (Container : in out Map;
+   Key       : in     Key_Type;
+   Element   : in     Element_Type;
+   Inserted  :    out Boolean);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Insert") " procedure inserts
+      the key and value pair specified by " (item parameter "Key")
+      " and " (item parameter "Element") " into the map specified by "
+      (item parameter "Container") " and sets " (item parameter "Inserted")
+      " to " (item constant "True") ".")
+    (para
+      "If " (item parameter "Key") " already exists in "
+      (item parameter "Container") " or there is no more space 
+      available in the table, " (item parameter "Inserted")
+      " is set to " (item constant "False") "."))
+  (subsection
+    (title "Performance/Complexity")
+    (para
+      "The " (item ada_function "Insert") " function
+       executes in " (item constant "O(1)") " time at zero load,
+       increasing towards " (item constant "O(N)") " as the
+       load factor increases. This is due to the use of simple linear
+       probing for hash collision resolution. Performance is dependent
+       on table size and hash function quality.")))

@@ -1,0 +1,27 @@
+(section
+  (ref "cgbc_bounded_hashed_maps_contains")
+  (title "CGBC.Bounded_Hashed_Maps.Contains")
+  (para function_desc "Key exists in Map?")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"function Contains
+  (Container : in Map;
+   Key       : in Key_Type) return Boolean;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Contains") " function
+      returns " (item constant "True") " if the key
+      specified by " (item parameter "Key") " exists in
+      the container specified by " (item parameter "Container") "."))
+  (subsection
+    (title "Performance/Complexity")
+    (para
+      "The " (item ada_function "Contains") " function
+       executes in " (item constant "O(1)") " time at zero load,
+       increasing towards " (item constant "O(N)") " as the
+       load factor increases. This is due to the use of simple linear
+       probing for hash collision resolution. Performance is dependent
+       on table size and hash function quality.")))

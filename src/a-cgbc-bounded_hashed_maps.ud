@@ -1,0 +1,57 @@
+(section
+  (title "CGBC.Bounded_Hashed_Maps")
+  (contents)
+
+  (subsection
+    (title "Synopsis")
+    (para "The " (item ada_package "Bounded_Hashed_Maps") " package provides a
+      generic implementation of a bounded hash table.")
+    (para-verbatim ada_package_synopsis
+      (render-noescape "cgbc_bounded_hashed_maps.txt")))
+
+  (subsection
+    (title "Generic Formal Parameters")
+    (para-verbatim ada_type_synopsis
+"generic
+  type Key_Type     is private;
+  type Element_Type is private;
+
+  with function Hash
+    (Key : in Key_Type) return Hash_Type;
+
+  with function Equivalent_Keys
+    (Left  : in Key_Type;
+     Right : in Key_Type) return Boolean;")
+    (para "The " (item ada_type "Key_Type") " formal parameter represents 
+      the type of keys that will be used to index elements.")
+    (para "The " (item parameter "Hash") " formal parameter function represents
+      a function that takes a key as input and produces a hash value as output.
+      The actual function for " (item parameter "Hash") " must return the same
+      value each time it is called with a particular key value.")
+    (para "The " (item parameter "Equivalent_Keys") " formal parameter function
+      represents a function that compares keys. The actual function for the
+      generic formal function " (item parameter "Equivalent_Keys")
+      " is expected to define an equivalence relationship, that is, be
+      reflexive, symmetric, and transitive.")
+    (para "The " (item ada_type "Element_Type") " formal parameter represents 
+      the type of elements that will be stored in the map containers."))
+
+  (subsection
+    (title "Types")
+    (para-verbatim ada_type_synopsis "type Map (Capacity : Count_Type) is tagged private;")
+    (para "The " (item ada_type "Map") " type represents a bounded map
+      that may contain between " (item constant "0") " and " 
+      (item parameter "Capacity") " elements of type " (item ada_type "Element_Type")
+      "."))
+
+  (include "a-cgbc-bounded_hashed_maps-clear.ud")
+  (include "a-cgbc-bounded_hashed_maps-contains.ud")
+  (include "a-cgbc-bounded_hashed_maps-length.ud")
+  (include "a-cgbc-bounded_hashed_maps-is_empty.ud")
+  (include "a-cgbc-bounded_hashed_maps-insert.ud")
+  (include "a-cgbc-bounded_hashed_maps-delete.ud")
+  (include "a-cgbc-bounded_hashed_maps-replace.ud")
+  (include "a-cgbc-bounded_hashed_maps-include.ud")
+  (include "a-cgbc-bounded_hashed_maps-exclude.ud")
+  (include "a-cgbc-bounded_hashed_maps-element.ud")
+)

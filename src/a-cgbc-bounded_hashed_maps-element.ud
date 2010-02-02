@@ -1,0 +1,33 @@
+(section
+  (ref "cgbc_bounded_hashed_maps_element")
+  (title "CGBC.Bounded_Hashed_Maps.Element")
+  (para procedure_desc "Retrieve value associated with key from map.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"procedure Element
+  (Container : in     Map;
+   Key       : in     Key_Type;
+   Element   :    out Element_Type;
+   Exists    :    out Boolean);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Element") " procedure retrieves
+      the value associated with the key specified by " (item parameter "Key")
+      " from the map specified by " (item parameter "Container") " and sets "
+      (item parameter "Exists") " to " (item constant "True") ". The value
+      is copied to " (item parameter "Element") ".
+      If " (item parameter "Key") " does not exist in the map, the procedure
+      sets " (item parameter "Exists") " to " (item constant "False") " and
+      leaves " (item parameter "Element") " unmodified."))
+  (subsection
+    (title "Performance/Complexity")
+    (para
+      "The " (item ada_function "Element") " function
+       executes in " (item constant "O(1)") " time at zero load,
+       increasing towards " (item constant "O(N)") " as the
+       load factor increases. This is due to the use of simple linear
+       probing for hash collision resolution. Performance is dependent
+       on table size and hash function quality.")))

@@ -1,0 +1,34 @@
+(section
+  (ref "cgbc_bounded_hashed_maps_replace")
+  (title "CGBC.Bounded_Hashed_Maps.Replace")
+  (para procedure_desc "Replace value associated with key in map.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"procedure Replace
+  (Container : in out Map;
+   Key       : in     Key_Type;
+   Element   : in     Element_Type;
+   Replaced  :    out Boolean);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Replace") " procedure replaces
+      the value associated with the key specified by " (item parameter "Key")
+      " with " (item parameter "Element") " in the map specified by "
+      (item parameter "Container") " and sets " (item parameter "Replaced")
+      " to " (item constant "True") ".")
+    (para
+      "If " (item parameter "Key") " does not exist in "
+      (item parameter "Container") ", " (item parameter "Replaced")
+      " is set to " (item constant "False") "."))
+  (subsection
+    (title "Performance/Complexity")
+    (para
+      "The " (item ada_function "Replace") " function
+       executes in " (item constant "O(1)") " time at zero load,
+       increasing towards " (item constant "O(N)") " as the
+       load factor increases. This is due to the use of simple linear
+       probing for hash collision resolution. Performance is dependent
+       on table size and hash function quality.")))

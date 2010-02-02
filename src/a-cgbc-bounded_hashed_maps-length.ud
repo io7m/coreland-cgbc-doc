@@ -1,0 +1,20 @@
+(section
+  (ref "cgbc_bounded_hashed_maps_length")
+  (title "CGBC.Bounded_Hashed_Maps.Length")
+  (para function_desc "Retrieve map length.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis
+"function Length (Container : in Map) return Count_Type;
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Length") " function
+      retrieves the number of elements in the map specified by "
+      (item parameter "Container") "."))
+  (subsection
+    (title "Performance/Complexity")
+    (para
+      "The " (item ada_function "Length") " function executes
+       in " (item constant "O(1)") " time.")))
