@@ -1,0 +1,22 @@
+(section
+  (title "CGBC API Reference")
+
+  (subsection
+    (title "Types")
+
+    (subsection
+      (title "Count_Type")
+      (para-verbatim ada_type_synopsis
+"type Count_Type is range 0 .. (2 ** 31) - 1;")
+      (para "The " (item ada_type "Count_Type") " type represents the
+        (potential or actual) number of elements of a container."))
+
+    (subsection
+      (title "Hash_Type")
+      (para-verbatim ada_type_synopsis
+"type Hash_Type is mod 2 ** 32;")
+      (para "The " (item ada_type "Hash_Type") " type represents the
+        range of the result of a hash function.")))
+
+  (include "a-cgbc-bounded_stacks.ud")
+)

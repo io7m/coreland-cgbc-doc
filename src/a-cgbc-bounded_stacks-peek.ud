@@ -1,0 +1,36 @@
+(section
+  (ref "cgbc_bounded_stacks_peek")
+  (title "CGBC.Bounded_Stacks.Peek")
+  (para procedure_desc "Peek at element on stack.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"generic
+  with procedure Process
+    (Element : in Element_Type);
+
+procedure Peek
+  (Container : in     Stack;
+   Underflow :    out Boolean);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Peek") " procedure
+      peeks at the element on the top of the stack specified by "
+      (item parameter "Container") ".")
+    (para
+      "If the number of elements in the stack is greater than "
+      (item constant "0") ", " (item parameter "Process") " is
+      called, passing the element at the top of the stack as "
+      (item parameter "Element") ". " (item parameter "Underflow")
+      " is set to " (item constant "False") ".")
+    (para
+      "If the number of elements in the stack is not greater than "
+      (item constant "0") ", " (item parameter "Underflow")
+      " is set to " (item constant "True") "."))
+  (subsection
+    (title "Performance/Complexity")
+    (para
+      "The " (item ada_procedure "Peek") " procedure executes
+       in " (item constant "O(1)") " time.")))

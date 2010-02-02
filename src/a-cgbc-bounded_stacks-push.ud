@@ -1,0 +1,35 @@
+(section
+  (ref "cgbc_bounded_stacks_push")
+  (title "CGBC.Bounded_Stacks.Push")
+  (para procedure_desc "Push element onto stack.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"procedure Push
+  (Container : in out Stack;
+   New_Item  : in     Element_Type;
+   Overflow  :    out Boolean);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Push") " procedure
+      pushes the element specified by " (item parameter "New_Item")
+      " onto the stack specified by " (item parameter "Container") ".")
+    (para
+      "If the number of elements in the stack is less than "
+      (item variable "Container.Capacity") ", the element specified
+      by " (item variable "New_Item") " is copied to
+      the top of the stack, increasing the length by " (item constant "1")
+      " and " (item parameter "Overflow") " is set to "
+      (item constant "False") ".")
+    (para
+      "If the number of elements in the stack is not less than "
+      (item variable "Container.Capacity") ", "
+      (item parameter "Overflow") " is set to " (item constant "True")
+      " and the stack is not modified."))
+  (subsection
+    (title "Performance/Complexity")
+    (para
+      "The " (item ada_procedure "Push") " procedure executes
+       in " (item constant "O(1)") " time.")))

@@ -1,0 +1,34 @@
+(section
+  (title "CGBC.Bounded_Stacks")
+  (contents)
+
+  (subsection
+    (title "Synopsis")
+    (para "The " (item ada_package "Bounded_Stacks") " package provides a
+      generic implementation of a bounded stack.")
+    (para-verbatim ada_package_synopsis
+      (render-noescape "cgbc_bounded_stacks.txt")))
+
+  (subsection
+    (title "Generic Formal Parameters")
+    (para-verbatim ada_type_synopsis
+"generic
+  type Element_Type is private;")
+    (para "The " (item ada_type "Element_Type") " formal parameter represents 
+      the type of elements that will be stored in the stack containers."))
+
+  (subsection
+    (title "Types")
+    (para-verbatim ada_type_synopsis "type Stack (Capacity : Count_Type) is tagged private;")
+    (para "The " (item ada_type "Stack") " type represents a bounded stack
+      that may contain between " (item constant "0") " and " 
+      (item parameter "Capacity") " elements of type " (item ada_type "Element_Type")
+      "."))
+
+  (include "a-cgbc-bounded_stacks-clear.ud")
+  (include "a-cgbc-bounded_stacks-length.ud")
+  (include "a-cgbc-bounded_stacks-is_empty.ud")
+  (include "a-cgbc-bounded_stacks-push.ud")
+  (include "a-cgbc-bounded_stacks-pop.ud")
+  (include "a-cgbc-bounded_stacks-peek.ud")
+)

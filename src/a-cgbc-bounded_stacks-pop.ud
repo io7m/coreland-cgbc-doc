@@ -1,0 +1,36 @@
+(section
+  (ref "cgbc_bounded_stacks_pop")
+  (title "CGBC.Bounded_Stacks.Pop")
+  (para procedure_desc "Pop element from stack.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"procedure Pop
+  (Container : in out Stack;
+   Item      :    out Element_Type;
+   Underflow :    out Boolean);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Pop") " procedure
+      pops the element on the top of the stack specified by "
+      (item parameter "Container") ".")
+    (para
+      "If the number of elements in the stack is greater than "
+      (item constant "0") ", the element on the top of the
+      stack is copied to " (item parameter "Item") " and removed,
+      decreasing the length of the stack by " (item constant "1")
+      " and " (item parameter "Underflow") " is set to "
+      (item constant "False") ".")
+    (para
+      "If the number of elements in the stack is not greater than "
+      (item constant "0") ", "
+      (item parameter "Underflow") " is set to " (item constant "True")
+      " and both the stack and " (item parameter "Item") " are
+      left unmodified."))
+  (subsection
+    (title "Performance/Complexity")
+    (para
+      "The " (item ada_procedure "Pop") " procedure executes
+       in " (item constant "O(1)") " time.")))
