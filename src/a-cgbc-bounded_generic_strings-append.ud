@@ -1,0 +1,24 @@
+(section
+  (ref "a_bounded_generic_strings_append")
+  (title "CGBC.Bounded_Generic_Strings.Append")
+  (para subprogram_desc "Append strings.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim subprogram_synopsis (render "cgbc-bounded_generic_strings-append.txt")))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_subprogram "Append") " subprograms append "
+      (item parameter "New_Item") " to " (item parameter "Source") ".")
+    (para
+      "If " (item parameter "Source") " does not have enough space to
+      fully append " (item parameter "New_Item") ", the behaviour of
+      the subprograms are dependent on " (item parameter "Drop") ".")
+    (para "If " (item parameter "Drop") " = " (item constant "Left") ",
+      the resulting string comprises the rightmost characters of "
+      (item parameter "Source") ".")
+    (para "If " (item parameter "Drop") " = " (item constant "Right") ",
+      the resulting string comprises the leftmost characters of "
+      (item parameter "Source") ".")
+    (para "If " (item parameter "Drop") " = " (item constant "Error") ",
+      then " (item ada_exception "Ada.Strings.Length_Error") " is raised.")))

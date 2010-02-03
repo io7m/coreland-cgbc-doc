@@ -1,0 +1,4 @@
+function Bounded_Slice
+  (Source : in Bounded_String;
+   Low    : in Positive;
+   High   : in Positive) return Bounded_String;

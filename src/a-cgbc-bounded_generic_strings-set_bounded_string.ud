@@ -1,0 +1,25 @@
+(section
+  (ref "a_bounded_generic_strings_set_bounded_string")
+  (title "CGBC.Bounded_Generic_Strings.Set_Bounded_String")
+  (para procedure_desc "Assign bounded strings.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis (render "cgbc-bounded_generic_strings-set_bounded_string.txt")))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Set_Bounded_String") " procedure sets the
+      contents of " (item parameter "Target") " to that of "
+      (item parameter "Source") ".")
+    (para
+      "If " (item parameter "Target") " is not large enough to contain "
+      (item parameter "Source") ", the behaviour is dependent on "
+      (item parameter "Drop") ".")
+    (para "If " (item parameter "Drop") " = " (item constant "Left") ",
+      the resulting string comprises the rightmost characters of "
+      (item parameter "Source") ".")
+    (para "If " (item parameter "Drop") " = " (item constant "Right") ",
+      the resulting string comprises the leftmost characters of "
+      (item parameter "Source") ".")
+    (para "If " (item parameter "Drop") " = " (item constant "Error") ",
+      then " (item ada_exception "Ada.Strings.Length_Error") " is raised.")))

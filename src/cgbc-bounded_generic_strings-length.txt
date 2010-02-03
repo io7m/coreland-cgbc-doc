@@ -1,0 +1,1 @@
+function Length (Source : in Bounded_String) return Natural;

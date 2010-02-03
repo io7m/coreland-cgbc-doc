@@ -1,0 +1,16 @@
+(section
+  (ref "a_bounded_generic_strings_element")
+  (title "CGBC.Bounded_Generic_Strings.Element")
+  (para function_desc "Retrieve elements from strings.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis (render "cgbc-bounded_generic_strings-element.txt")))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Element") " function retrieves the
+      element at " (item parameter "Index") " of " (item parameter "Source") ".")
+    (para
+      "It raises " (item ada_exception "Ada.Strings.Index_Error") " if "
+      (item parameter "Index") " is not a valid bound for "
+      (item parameter "Source") ".")))

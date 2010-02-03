@@ -1,0 +1,4 @@
+procedure Replace_Element
+  (Source : in out Bounded_String;
+   Index  : in     Positive;
+   By     : in     Character_Type);

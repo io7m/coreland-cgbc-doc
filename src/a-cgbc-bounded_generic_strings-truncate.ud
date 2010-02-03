@@ -1,0 +1,12 @@
+(section
+  (ref "a_bounded_generic_strings_truncate")
+  (title "CGBC.Bounded_Generic_Strings.Truncate")
+  (para procedure_desc "Truncate strings.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis (render "cgbc-bounded_generic_strings-truncate.txt")))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Truncate") " procedure sets the current
+      length of " (item parameter "Source") " to " (item constant "0") ".")))

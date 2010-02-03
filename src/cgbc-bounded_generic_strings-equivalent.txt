@@ -1,0 +1,7 @@
+function Equivalent
+  (Left  : in Bounded_String;
+   Right : in Bounded_String) return Boolean;
+
+function "="
+  (Left  : in Bounded_String;
+   Right : in Bounded_String) return Boolean renames Equivalent;

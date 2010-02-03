@@ -1,0 +1,1 @@
+type Bounded_String (Capacity : Positive) is private;

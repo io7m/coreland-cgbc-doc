@@ -1,0 +1,13 @@
+(section
+  (ref "a_bounded_generic_strings_to_string")
+  (title "CGBC.Bounded_Generic_Strings.To_String")
+  (para function_desc "Convert bounded strings.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis (render "cgbc-bounded_generic_strings-to_string.txt")))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "To_String") " function returns the contents of "
+      (item parameter "Source") " (up to the current length) as a fixed string
+      type.")))

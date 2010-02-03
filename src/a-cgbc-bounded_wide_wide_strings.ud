@@ -1,0 +1,11 @@
+(section
+  (ref "a_bounded_wide_wide_strings")
+  (title "CGBC.Bounded_Wide_Wide_Strings")
+
+  (subsection
+    (title "Synopsis")
+    (para "The " (item ada_package "CGBC.Bounded_Wide_Wide_Strings") " package is an
+      instantiation of " (link "a_bounded_generic_strings" "CGBC.Bounded_Generic_Strings")
+      ".")
+    (para-verbatim ada_package_synopsis (render "a-cgbc-bounded_wide_wide_strings.ads")))
+)

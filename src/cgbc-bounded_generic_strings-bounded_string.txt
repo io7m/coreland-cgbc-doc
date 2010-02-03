@@ -1,0 +1,4 @@
+subtype Positive is Standard.Positive;
+subtype Natural  is Standard.Natural;
+
+type Bounded_String (Last_Index : Positive) is private;

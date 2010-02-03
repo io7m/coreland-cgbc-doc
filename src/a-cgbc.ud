@@ -20,4 +20,8 @@
 
   (include "a-cgbc-bounded_stacks.ud")
   (include "a-cgbc-bounded_hashed_maps.ud")
+  (include "a-cgbc-bounded_generic_strings.ud")
+  (include "a-cgbc-bounded_strings.ud")
+  (include "a-cgbc-bounded_wide_strings.ud")
+  (include "a-cgbc-bounded_wide_wide_strings.ud")
 )

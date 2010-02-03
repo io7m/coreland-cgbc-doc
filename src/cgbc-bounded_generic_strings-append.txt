@@ -1,0 +1,29 @@
+function Append
+  (Source   : in Bounded_String;
+   New_Item : in Bounded_String;
+   Drop     : in Ada.Strings.Truncation := Ada.Strings.Error) return Bounded_String;
+
+function Append
+  (Source   : in Bounded_String;
+   New_Item : in String_Type;
+   Drop     : in Ada.Strings.Truncation := Ada.Strings.Error) return Bounded_String;
+
+function Append
+  (Source   : in String_Type;
+   New_Item : in Bounded_String;
+   Drop     : in Ada.Strings.Truncation := Ada.Strings.Error) return Bounded_String;
+
+function Append
+  (Source   : in Bounded_String;
+   New_Item : in Character_Type;
+   Drop     : in Ada.Strings.Truncation := Ada.Strings.Error) return Bounded_String;
+
+procedure Append
+  (Source   : in out Bounded_String;
+   New_Item : in     Bounded_String;
+   Drop     : in     Ada.Strings.Truncation := Ada.Strings.Error);
+
+procedure Append
+  (Source   : in out Bounded_String;
+   New_Item : in     String_Type;
+   Drop     : in     Ada.Strings.Truncation := Ada.Strings.Error);

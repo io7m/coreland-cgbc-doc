@@ -123,6 +123,7 @@ table.exception_table td {
 .source,
 .function_synopsis,
 .procedure_synopsis,
+.subprogram_synopsis,
 .ada_type_synopsis,
 .ada_generic_synopsis,
 .ada_package_synopsis,

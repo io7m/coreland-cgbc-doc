@@ -1,0 +1,12 @@
+(section
+  (ref "a_bounded_generic_strings_to_bounded_string")
+  (title "CGBC.Bounded_Generic_Strings.To_Bounded_String")
+  (para function_desc "Create bounded strings.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis (render "cgbc-bounded_generic_strings-to_bounded_string.txt")))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "To_Bounded_String") " function returns a
+      new bounded string with the contents of " (item parameter "Source") ".")))

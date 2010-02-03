@@ -1,0 +1,12 @@
+(section
+  (ref "a_bounded_generic_strings_length")
+  (title "CGBC.Bounded_Generic_Strings.Length")
+  (para function_desc "Retrieve current lengths of strings.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis (render "cgbc-bounded_generic_strings-length.txt")))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Length") " function returns the current
+      length of " (item parameter "Source") ".")))

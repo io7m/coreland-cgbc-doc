@@ -1,0 +1,4 @@
+procedure Set_Bounded_String
+  (Target :    out Bounded_String;
+   Source : in     String_Type;
+   Drop   : in     Ada.Strings.Truncation := Ada.Strings.Error);

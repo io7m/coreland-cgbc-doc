@@ -1,0 +1,43 @@
+(section
+  (ref "a_bounded_generic_strings")
+  (title "CGBC.Bounded_Generic_Strings")
+  (contents)
+
+  (subsection
+    (title "Synopsis")
+    (para "The " (item ada_package "CGBC.Bounded_Generic_Strings") " package provides
+      generic bounded string subprograms.")
+    (para-verbatim ada_package_synopsis
+     (render-noescape "cgbc_bounded_generic_strings.txt")))
+
+  (subsection
+    (title "Generic Formal Parameters")
+    (para-verbatim ada_type_synopsis (render "a-cgbc-bounded_generic_strings-generic.txt"))
+    (para "The " (item ada_type "String_Type") " represents the underlying
+      composite type for the " (item ada_type "Bounded_String") "."))
+
+  (subsection
+    (title "Types")
+    (subsection
+      (title "Bounded_String")
+      (para-verbatim ada_type_synopsis (render "a-cgbc-bounded_generic_strings-bounded_string.txt"))
+      (para "The package provides a single, private "
+        (item ada_type "Bounded_String") " type representing a bounded string. The
+        length of the contents of the string may vary (the \"current length\")
+        and may grow to " (item parameter "Capacity") ", the \"maximum length\".")
+      (para "Bounded strings do not use the heap - they only use stack or static
+        storage.")))
+
+  (include "a-cgbc-bounded_generic_strings-append.ud")
+  (include "a-cgbc-bounded_generic_strings-bounded_slice.ud")
+  (include "a-cgbc-bounded_generic_strings-element.ud")
+  (include "a-cgbc-bounded_generic_strings-equivalent.ud")
+  (include "a-cgbc-bounded_generic_strings-length.ud")
+  (include "a-cgbc-bounded_generic_strings-maximum_length.ud")
+  (include "a-cgbc-bounded_generic_strings-replace_element.ud")
+  (include "a-cgbc-bounded_generic_strings-set_bounded_string.ud")
+  (include "a-cgbc-bounded_generic_strings-slice.ud")
+  (include "a-cgbc-bounded_generic_strings-to_bounded_string.ud")
+  (include "a-cgbc-bounded_generic_strings-to_string.ud")
+  (include "a-cgbc-bounded_generic_strings-truncate.ud")
+)

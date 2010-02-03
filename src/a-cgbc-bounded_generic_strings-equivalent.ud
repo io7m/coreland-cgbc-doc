@@ -1,0 +1,17 @@
+(section
+  (ref "a_bounded_generic_strings_equivalent")
+  (title "CGBC.Bounded_Generic_Strings.Equivalent")
+  (para function_desc "Compare strings.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis (render "cgbc-bounded_generic_strings-equivalent.txt")))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Equivalent") " function returns "
+      (item constant "True") " if " (item parameter "Left") " and "
+      (item parameter "Right") " are equivalent.")
+    (para
+      "Two strings are equivalent if they both have the same current
+      length (not maximum bounds) and the contents of the strings are
+      identical.")))

@@ -1,0 +1,17 @@
+(section
+  (ref "a_bounded_generic_strings_replace_element")
+  (title "CGBC.Bounded_Generic_Strings.Replace_Element")
+  (para procedure_desc "Replace elements of strings.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis (render "cgbc-bounded_generic_strings-replace_element.txt")))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Replace_Element") " procedure replaces the
+      element at " (item parameter "Index") " of " (item parameter "Source")
+      " with " (item parameter "By") ".")
+    (para
+      "It raises " (item ada_exception "Ada.Strings.Index_Error") " if "
+      (item parameter "Index") " is not a valid bound for "
+      (item parameter "Source") ".")))

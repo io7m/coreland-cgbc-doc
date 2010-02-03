@@ -1,0 +1,13 @@
+(section
+  (ref "a_bounded_generic_strings_maximum_length")
+  (title "CGBC.Bounded_Generic_Strings.Maximum_Length")
+  (para function_desc "Retrieve maximum lengths of strings.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim function_synopsis (render "cgbc-bounded_generic_strings-maximum_length.txt")))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_function "Maximum_Length") " function returns the maximum
+      length of " (item parameter "Source") ". The string cannot grow any larger
+      than this value.")))

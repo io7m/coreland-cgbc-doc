@@ -1,0 +1,3 @@
+function Element
+  (Source : in Bounded_String;
+   Index  : in Positive) return Character_Type;

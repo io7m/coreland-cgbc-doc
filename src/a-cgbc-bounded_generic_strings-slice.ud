@@ -1,0 +1,17 @@
+(section
+  (ref "a_bounded_generic_strings_slice")
+  (title "CGBC.Bounded_Generic_Strings.Slice")
+  (para subprogram_desc "Retrieve slices of strings.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim subprogram_synopsis (render "cgbc-bounded_generic_strings-slice.txt")))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_subprogram "Slice") " subprogram retrieves a
+      slice of " (item parameter "Source") " from " (item parameter "Low")
+      " to " (item parameter "High") ".")
+    (para
+      "It raises " (item ada_exception "Ada.Strings.Index_Error") " if either "
+      (item parameter "Low") " or " (item parameter "High") " are not valid
+      bounds for " (item parameter "Source") ".")))
