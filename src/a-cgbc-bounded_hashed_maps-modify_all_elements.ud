@@ -1,0 +1,30 @@
+(section
+  (ref "cgbc_bounded_hashed_maps_modify_all_elements")
+  (title "CGBC.Bounded_Hashed_Maps.Modify_All_Elements")
+  (para procedure_desc "Modify all elements of map.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"generic
+  with procedure Process
+    (Key     : in     Key_Type;
+     Element : in out Element_Type);
+
+procedure Modify_All_Elements (Container : in Map);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Modify_All_Elements") " procedure
+      retrieves the each key/value pair from the map specified by "
+      (item parameter "Container") " and passes each pair to "
+      (item parameter "Process") " in " (item parameter "Key") " and "
+      (item parameter "Element") ", without copying.")
+    (para
+      "The order in which pairs are passed to " (item parameter "Process")
+      " is unspecified."))
+  (subsection
+    (title "Performance/Complexity")
+    (para
+      "The " (item ada_procedure "Modify_All_Elements") " procedure
+       executes in " (item constant "O(N)") " time.")))

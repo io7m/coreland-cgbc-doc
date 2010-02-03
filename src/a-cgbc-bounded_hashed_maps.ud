@@ -54,4 +54,8 @@
   (include "a-cgbc-bounded_hashed_maps-include.ud")
   (include "a-cgbc-bounded_hashed_maps-exclude.ud")
   (include "a-cgbc-bounded_hashed_maps-element.ud")
+  (include "a-cgbc-bounded_hashed_maps-query_element.ud")
+  (include "a-cgbc-bounded_hashed_maps-modify_element.ud")
+  (include "a-cgbc-bounded_hashed_maps-query_all_elements.ud")
+  (include "a-cgbc-bounded_hashed_maps-modify_all_elements.ud")
 )

@@ -1,0 +1,40 @@
+(section
+  (ref "cgbc_bounded_hashed_maps_query_element")
+  (title "CGBC.Bounded_Hashed_Maps.Query_Element")
+  (para procedure_desc "Query element of map.")
+  (subsection
+    (title "Synopsis")
+    (para-verbatim procedure_synopsis
+"generic
+  with procedure Process
+    (Key     : in Key_Type;
+     Element : in Element_Type);
+
+procedure Query_Element
+  (Container : in     Map;
+   Key       : in     Key_Type;
+   Exists    :    out Boolean);
+"))
+  (subsection
+    (title "Description")
+    (para
+      "The " (item ada_procedure "Query_Element") " procedure
+      retrieves the value associated with " (item parameter "Key")
+      " from the map specified by "
+      (item parameter "Container") ", sets " (item parameter "Exists") " to "
+      (item constant "True") " and passes both key and value to "
+      (item parameter "Process") " in " (item parameter "Key") " and "
+      (item parameter "Element") ", without copying.")
+    (para
+      "If " (item parameter "Key") " does not exist in the map, "
+      (item parameter "Process") " is not called and " 
+      (item parameter "Exists") " is set to " (item constant "False") "."))
+  (subsection
+    (title "Performance/Complexity")
+    (para
+      "The " (item ada_procedure "Query_Element") " procedure
+       executes in " (item constant "O(1)") " time at zero load,
+       increasing towards " (item constant "O(N)") " as the
+       load factor increases. This is due to the use of simple linear
+       probing for hash collision resolution. Performance is dependent
+       on table size and hash function quality.")))
