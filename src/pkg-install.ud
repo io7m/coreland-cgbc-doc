@@ -210,4 +210,24 @@ echo > conf-fakeroot
 make
 make tests
 make install install-check"))
+
+  (subsection
+    (title "Reporting success")
+    (para "Please send mail to " (item address "test-results@coreland.ath.cx")
+      " with the subject:")
+    (para-verbatim example "cgbc test results")
+    (para "Attach the following files:")
+    (para-verbatim example
+"UNIT_TESTS/tests-summary.log_out
+sysdeps.out"))
+
+  (subsection
+    (title "Support")
+    (subsection
+      (title "IRC")
+      (para "Check " (link-ext "irc://irc.freenode.net/coreland" "#coreland")
+        " on " (link-ext "http://freenode.net")))
+    (subsection
+      (title "Mailing Lists")
+      (para (link-ext "http://mail.coreland.ath.cx/mailman/listinfo/"))))
 )
